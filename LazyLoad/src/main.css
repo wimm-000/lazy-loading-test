@@ -1,0 +1,206 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --color__background: white;
+    --color__text: #559AAF;
+    --color__main: #559AAF;
+    --color__base: SteelBlue;
+    --color__alt-50: rgba(196, 196, 196, .2);
+    --color__alt-100: #D8D8D8;
+    --flow: 1.25rem;
+    --horizontal-flow: 0.625rem;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+html {
+    min-height: 100%;
+}
+
+/* Utilities */
+
+.flow > * + * {
+    margin-top: var(--flow, 1.25rem);
+}
+
+.horizontal-flow > * + * {
+    margin-left: var(--horizontal-flow, 0.625rem);
+}
+
+body {
+    min-height: 100%;
+    font-size: 100%;
+    background-color: var(--color__background);
+    color: var(--color__text);
+    padding: var(--padding__main, 2rem);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+    --flow: .625rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--color__alt-100);
+}
+
+.amount {
+    width: 105px;
+    height: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color__background);
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: var(--color__main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modules {
+    display: flex;
+    justify-content: center;
+    background: var(--color__alt-100);
+    padding: var(--horizontal-flow);
+    border-radius: 5px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.switch {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--color__main);
+    border-radius: 10px;
+    background: var(--color__background);
+    color: var(--color__main);
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: .8rem 1rem;
+    outline: 0;
+}
+
+.switch::first-letter {
+    text-transform: uppercase;
+}
+
+.switch.active {
+    background: var(--color__main);
+    color: var(--color__background);
+}
+
+.active-modules {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+}
+
+.module {
+    width: 49.5%;
+    flex-shrink: 0;
+    padding: .9375rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.basic-operator {
+    --flow: .625rem;
+    background: var(--color__alt-50);
+    border-radius: 5px;
+    padding: .825rem;
+}
+
+.basic-operator input {
+    display: block;
+    font-family: inherit;
+    width: 100%;
+    padding: .825rem;
+    font-size: 1.25rem;
+    border: 1px solid var(--color__alt-100); 
+}
+
+.basic-operator button {
+    background: var(--color__main);
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    display: block;
+    width: 100%;
+    color: var(--color__background);
+    padding: .625rem;
+    cursor: pointer;
+    outline: 0;
+
+}
+
+.basic-operator button:active {
+    border: 1px solid var(--color__main);
+    background: var(--color__background);
+    color: var(--color__main);
+}
