@@ -1,12 +1,12 @@
 import React from 'react'
 import Module from './Module'
 import {useDispatch} from "react-redux"
-import { multiply } from '../../store/counterSlice'
+import { divide } from '../../store/counterSlice'
 
 export default function Divide({name}) {
     const dispatch = useDispatch()
     const handleClick = (value) => {
-        dispatch(multiply(value))
+        dispatch(divide(value))
     }
     return (
         <li className="module">
